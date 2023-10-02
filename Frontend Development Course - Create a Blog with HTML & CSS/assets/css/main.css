@@ -269,12 +269,11 @@ body.light-theme{
 
 
 /* Form JavaScript styles */
-
-.search-form-container.activated
-{
+.search-form-container.activated{
     opacity: 1;
     transform: scale(1);
 }
+
 /* Featured articles */
 .featured-articles{
     padding-block: 2rem;
@@ -297,12 +296,14 @@ body.light-theme{
     font-size: var(--font-size-xsm);
 }
 
-.headine{
+.headline{
+    background-color: #000;
     color: var(--light-color);
     font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
-    padding: .4rem;
+    letter-spacing: 1px;
+    padding: 4px;
     height: 100%;
 }
 
@@ -316,7 +317,7 @@ body.light-theme{
 }
 
 .fancy-border::before{
-    content: " ";
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -331,10 +332,9 @@ body.light-theme{
     position: relative;
     z-index: 10;
     display: inline-flex;
-    background-color: var(--primary-background-color);
+    background-color: var(--secondary-background-color);
     padding: .6rem 1.5rem;
 }
-
 
 .article{
     position: relative;
@@ -372,6 +372,7 @@ body.light-theme{
     transition: background-color .5s;
 }
 
+/* Light theme color hover styles */
 .article:hover .article-data-container{
     background-color: var(--hover-dark-color);
     color: var(--hover-light-color);
@@ -384,7 +385,6 @@ body.light-theme{
 .article:hover .article-title{
     color: var(--hover-light-color);
 }
-
 
 
 .article-data{
@@ -410,8 +410,6 @@ body.light-theme{
     font-size: var(--font-size-md);
 }
 
-
-/* Featured articles - Sidebar */
 /* Sidebar */
 .sidebar{
     background-color: var(--secondary-background-color);
@@ -463,8 +461,50 @@ body.light-theme{
 }
 
 /* Quick read */
+.section-title{
+    position: relative;
+    font-size: var(--font-size-md);
+    margin-bottom: 6rem;
+}
+
+.section-title::after{
+    content: attr(data-name);
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    opacity: .1;
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+}
+
+.article.swiper-slide{
+    height: 40rem;
+}
 
 /* Quick read - Swiper */
+.swiper-wrapper{
+    height: auto;
+}
+.swiper-controls{
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--secondary-background-color);
+}
+
+.swiper-controls::after{
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+.swiper-pagination{
+    bottom: .5rem !important;
+}
+
+.swiper-pagination-bullet{
+    background-color:var(--light-color);
+}
+
+
 
 /* Older posts */
 
